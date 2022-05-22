@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+::-webkit-scrollbar-track {
+  background-color: #d1d1d1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #bbbbbb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #757575;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --white: rgb(255, 255, 255);
+  --light-grey: rgb(230, 230, 230);
+  --mid-grey: rgb(170, 170, 170);
+  --black: rgb(36, 36, 36);
+}
