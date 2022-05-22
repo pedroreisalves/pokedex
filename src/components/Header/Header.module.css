@@ -14,16 +14,11 @@
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.explore:hover p {
-  color: var(--mid-grey);
-}
-
 .explore p {
   transform: rotate(-90deg);
   position: relative;
   bottom: 85px;
   font-size: 15px;
-  transition: all 200ms ease;
 }
 
 .explore i {
