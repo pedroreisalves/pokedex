@@ -1,7 +1,7 @@
 .searchBar {
   align-items: center;
   color: var(--black);
-  background-color: var(--light-grey);
+  background-color: var(--mid-grey);
   display: flex;
   height: 40vh;
   justify-content: space-between;
@@ -21,7 +21,7 @@
 }
 
 .searchBar input::placeholder {
-  color: var(--mid-grey);
+  color: var(--heavy-grey);
 }
 
 .searchBar div {
@@ -29,7 +29,7 @@
 }
 
 .searchBar div button {
-  background-color: var(--light-grey);
+  background-color: var(--mid-grey);
   border: none;
   border-radius: 100%;
   cursor: pointer;

@@ -7,7 +7,7 @@ export default class Header extends Component {
     return (
       <div className={ styles.innitialContainer }>
         <div className={ styles.explore }>
-          <i class="fa-solid fa-down-long"></i>
+          <i className="fa-solid fa-down-long"></i>
           <p>explore</p>
         </div>
         <header>

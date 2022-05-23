@@ -22,7 +22,8 @@
 
 :root {
   --white: rgb(255, 255, 255);
-  --light-grey: rgb(230, 230, 230);
-  --mid-grey: rgb(170, 170, 170);
+  --light-grey: rgb(243, 243, 243);
+  --mid-grey: rgb(225, 225, 225);
+  --heavy-grey: rgb(180, 180, 180);
   --black: rgb(36, 36, 36);
 }
