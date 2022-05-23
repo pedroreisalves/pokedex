@@ -6,11 +6,7 @@
 
 > This project was created as a pokemon guide, which informs the pokemons name, id, types, attributes, etc.
 
-<img src="" />
-<hr />
-<img src="" />
-<hr />
-<img src="" />
+<img src="src/images/project/pokedex.png" />
 
 ## Technologies Used
 
