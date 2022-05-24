@@ -41,7 +41,12 @@ class Main extends Component {
   }
 
   capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    let palavras = string.split(" ");
+    for (let i = 0; i < palavras.length; i += 1) {
+      palavras[i] = palavras[i][0].toUpperCase() + palavras[i].substr(1);
+    }
+    console.log(palavras);
+    return palavras.join(" ");
   }
 
   render() {
@@ -124,7 +129,7 @@ class Main extends Component {
                     <div>
                       <div>
                         <p>#{ this.resolveId(pokemon.id) }</p>
-                        <h3>{ this.capitalizeFirstLetter(pokemon.name) }</h3>
+                        <h3>{ this.capitalizeFirstLetter(pokemon.name.replace(/-/g, " ")) }</h3>
                       </div>
                       <div
                         style={{
