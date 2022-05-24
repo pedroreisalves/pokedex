@@ -56,11 +56,12 @@ class Main extends Component {
         <div className={ styles.searchBar }>
           <h1>Select your Pokémon</h1>
           <div>
-            <label htmlFor={ styles.search }>
+            <label htmlFor="search">
               <input
                 value={ search }
                 type="text"
                 onChange={ ({ target }) => this.setState({ [target.id]: target.value }) }
+                onKeyUp={ ({ key }) => (key === 'Enter' && search.length) && this.searchByQuery() }
                 id="search"
                 placeholder="Search a name"
               />
