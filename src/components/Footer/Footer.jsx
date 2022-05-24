@@ -4,7 +4,7 @@ import './Footer.css';
 export default class Footer extends Component {
   render() {
     return (
-      <footer>Footer</footer>
+      <footer>developed by pedro reis</footer>
     )
   }
 }

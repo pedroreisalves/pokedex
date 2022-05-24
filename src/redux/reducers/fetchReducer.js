@@ -1,9 +1,12 @@
-import { SET_POKEMONS, MORE_QTD, RESET_QTD, SET_TOTAL, SET_TYPES } from "../actions";
+import {
+  SET_DATA, SET_TOTAL, SET_TYPES, SET_CURRENT_TYPE, SET_INPUT_VALUE,
+} from "../actions";
 
 const INITIAL_STATE = {
-  pokemons: [],
+  data: [],
   types: [],
-  qtd: 9,
+  input: '',
+  currentType: 'all',
   total: 0,
 }
 
@@ -11,14 +14,14 @@ const fetchReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case SET_TYPES:
     return { ...state, types: [...action.payload] };
-  case MORE_QTD:
-    return { ...state, qtd: state.length + 6 };
-  case RESET_QTD:
-    return { ...state, qtd: 9 };
   case SET_TOTAL:
-    return { ...state, total: action.payload }
-  case SET_POKEMONS:
-    return { ...state, pokemons: [...action.payload] }
+    return { ...state, total: action.payload };
+  case SET_DATA:
+    return { ...state, data: [...action.payload] };
+  case SET_CURRENT_TYPE:
+    return { ...state, currentType: action.payload };
+  case SET_INPUT_VALUE:
+    return { ...state, input: action.payload }
   default:
     return state;
   }
