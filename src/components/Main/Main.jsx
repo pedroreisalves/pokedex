@@ -45,7 +45,6 @@ class Main extends Component {
     for (let i = 0; i < palavras.length; i += 1) {
       palavras[i] = palavras[i][0].toUpperCase() + palavras[i].substr(1);
     }
-    console.log(palavras);
     return palavras.join(" ");
   }
 
