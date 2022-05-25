@@ -46,7 +46,7 @@
 }
 
 .typesContainer {
-  width: 20%;
+  width: 20vw;
   border-right: 1px solid var(--mid-grey);
   display: flex;
   flex-direction: column;
@@ -104,14 +104,13 @@
   display: flex;
   flex-wrap: wrap;
   width: 70vw;
-  margin: auto;
 }
 
 .pokemonContainer {
   display: flex;
   flex-direction: column;
   width: 20vw;
-  height: 45vh;
+  height: 300px;
   background-color: var(--white);
   border-radius: 15px;
   margin: 15px 20px;
