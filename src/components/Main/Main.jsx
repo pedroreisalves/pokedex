@@ -36,7 +36,7 @@ class Main extends Component {
   searchByQuery = () => {
     const { currentType, fetchDataAction } = this.props;
     const { search } = this.state;
-    fetchDataAction(currentType, search);
+    fetchDataAction(currentType, search.toLowerCase());
     this.setState({ search: '', qtd: 9 });
   }
 
