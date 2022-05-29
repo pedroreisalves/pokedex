@@ -54,7 +54,9 @@ class Main extends Component {
     return (
       <>
         <div className={ styles.searchBar }>
-          <h1>Select your Pokémon</h1>
+          <div>
+            <h1>Select your Pokémon</h1>
+          </div>
           <div>
             <label htmlFor="search">
               <input
@@ -115,8 +117,29 @@ class Main extends Component {
           </div>
           <div className={ styles.mainInfo }>
             <div className={ styles.totalContainer }>
-              <img src={ icon } alt="poke-icon" />
-              <h3>{ total } Pokémons</h3>
+              <div>
+                <img src={ icon } alt="poke-icon" />
+                <h3>{ total } Pokémons</h3>
+              </div>
+              <div className={ styles.selectTypeContainer }>
+                <select
+                  name="typeSelect"
+                  id="typeSelect"
+                  onChange={ ({ target }) => { this.setState({ qtd: 9 }, () => fetchDataAction(target.value)) } }
+                >
+                  <option value="all">All</option>
+                  {
+                    types.map((type, index) => (
+                      <option
+                        key={ index }
+                        value={ type }
+                      >
+                        {this.capitalizeFirstLetter(type)}
+                      </option>
+                    ))
+                  }
+                </select>
+            </div>
             </div>
             <div className={ styles.pokemonsContainer }>
               {
