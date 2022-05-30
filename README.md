@@ -24,6 +24,7 @@
 * React.js
 * Redux
 * SPA
+* Responsive CSS
 
 ## View Project
 
