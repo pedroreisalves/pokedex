@@ -227,7 +227,7 @@
 
 .Details > div {
   background-color: var(--light-grey);
-  width: 50vw;
+  width: 40vw;
   height: 60vh;
   border-radius: 15px;
   border: 1px solid var(--heavy-grey);
@@ -254,7 +254,7 @@
 }
 
 .pokemonInfoContainer {
-  width: 60%;
+  width: 52%;
   border-radius: 0 15px 15px 0;
   color: var(--black);
 }
