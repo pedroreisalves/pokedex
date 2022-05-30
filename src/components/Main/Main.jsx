@@ -8,7 +8,7 @@ import styles from './Main.module.css';
 class Main extends Component {
   constructor() {
     super();
-    this.state = { qtd: 9, search: '', }
+    this.state = { qtd: 9, search: '', details: false };
   }
 
   componentDidMount() {
@@ -50,7 +50,7 @@ class Main extends Component {
 
   render() {
     const { total, types, fetchDataAction, data, currentType } = this.props;
-    const { qtd, search } = this.state;
+    const { qtd, search, details } = this.state;
     return (
       <>
         <div className={ styles.searchBar }>
@@ -144,7 +144,11 @@ class Main extends Component {
             <div className={ styles.pokemonsContainer }>
               {
                 data.map((pokemon) => (
-                  <div className={ styles.pokemonContainer } key={ pokemon.id }>
+                  <div
+                    className={ styles.pokemonContainer }
+                    key={ pokemon.id }
+                    onClick={ () => this.setState({ details: pokemon }) }
+                  >
                     <img
                       src={ `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${this.resolveId(pokemon.id)}.png` }
                       alt={ pokemon.name }
@@ -183,6 +187,54 @@ class Main extends Component {
             </div>
           </div>
         </div>
+        {
+          details && (
+            <div className={ styles.Details }>
+              <i
+                className="fa-solid fa-xmark"
+                onClick={ () => this.setState({ details: false }) }
+              />
+              <div>
+                <div className={ styles.pokemonImgContainer }>
+                  <img
+                    src={ `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${this.resolveId(details.id)}.png` }
+                    alt={ details.name }
+                  />
+                </div>
+                <div className={ styles.pokemonInfoContainer }>
+                  <h1>{ this.capitalizeFirstLetter(details.name) } <span>#{ this.resolveId(details.id) }</span></h1>
+                  <p className={ `${styles.type} ${styles[details.types[0].type.name]}` }>
+                    { this.capitalizeFirstLetter(details.types[0].type.name) }
+                  </p>
+                  <div className={ styles.pokeInfo }>
+                    <div>
+                      <p>Height:</p>
+                      <p>{ (details.height * 0.1).toFixed(1) } m</p>
+                    </div>
+                    <div>
+                      <p>Weight:</p>
+                      <p>{ (details.weight * 0.1).toFixed(1) } kg</p>
+                    </div>
+                  </div>
+                  <div className={ styles.pokeInfo }>
+                    <div>
+                      <p>HP:</p>
+                      <p>{ details.stats[0].base_stat }</p>
+                    </div>
+                    <div>
+                      <p>Attack:</p>
+                      <p>{ details.stats[1].base_stat }</p>
+                    </div>
+                    <div>
+                      <p>Defense:</p>
+                      <p>{ details.stats[2].base_stat }</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        }
       </>
     )
   }

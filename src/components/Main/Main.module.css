@@ -125,6 +125,10 @@
   justify-content: center;
 }
 
+.pokemonsContainer a {
+  text-decoration: none;
+}
+
 .pokemonContainer {
   display: flex;
   flex-direction: column;
@@ -138,6 +142,7 @@
   padding: 0 20px;
   transition: all 250ms;
   animation: fromBottom .5s ease-out;
+  cursor: pointer;
 }
 
 .pokemonContainer:hover {
@@ -192,6 +197,180 @@
 
 .seeMoreContainer button:hover {
   background-color: rgb(79, 147, 179)
+}
+
+.Details {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Details i {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 1.5rem;
+  transition: all .5s ease-out;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.Details i:hover {
+  color: var(--heavy-grey);
+}
+
+.Details > div {
+  background-color: var(--light-grey);
+  width: 50vw;
+  height: 60vh;
+  border-radius: 15px;
+  border: 1px solid var(--heavy-grey);
+  box-shadow: 0 0 7.5px var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fromBottom .4s ease-out;
+}
+
+.pokemonImgContainer {
+  background-color: rgb(227, 227, 227);
+  border-right: 1px solid var(--heavy-grey);
+  height: 100%;
+  width: 25%;
+  border-radius: 15px 0 0 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.pokemonImgContainer img {
+  width: 13rem;
+}
+
+.pokemonInfoContainer {
+  width: 60%;
+  border-radius: 0 15px 15px 0;
+  color: var(--black);
+}
+
+.pokemonInfoContainer h1 {
+  font-size: 1.7rem;
+}
+
+.pokemonInfoContainer h1 span {
+  font-size: 1.1rem;
+  color: var(--heavy-grey);
+  font-weight: 400;
+}
+
+.pokeInfo {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.pokeInfo > div {
+  margin: 0 15px 0 0;
+}
+
+.pokeInfo > div > p:nth-child(1) {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #8c8c8c;
+  margin-bottom: 3px;
+}
+
+.pokeInfo > div > p:nth-child(2) {
+  font-weight: 500;
+  color: var(--black);
+}
+
+.type {
+  width: fit-content;
+  padding: 4px 10px;
+  color: var(--white);
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.normal {
+  background-color: silver;
+}
+
+.fighting {
+  background-color: red;
+}
+
+.flying {
+  background-color: deepskyblue;
+}
+
+.poison {
+  background-color: purple;
+}
+
+.ground {
+  background-color: saddlebrown;
+}
+
+.rock {
+  background-color: rosybrown;
+}
+
+.bug {
+  background-color: greenyellow;
+}
+
+.ghost {
+  background-color: rebeccapurple;
+}
+
+.steel {
+  background-color: steelblue;
+}
+
+.fire {
+  background-color: orange;
+}
+
+.water {
+  background-color: dodgerblue;
+}
+
+.grass {
+  background-color: green;
+}
+
+.electric {
+  background-color: yellow;
+}
+
+.psychic {
+  background-color: coral;
+}
+
+.ice {
+  background-color: paleturquoise;
+}
+
+.dragon {
+  background-color: darkblue;
+}
+
+.dark {
+  background-color: rgb(67, 67, 67);
+}
+
+.fairy {
+  background-color: palevioletred;
 }
 
 @keyframes fromBottom {
@@ -256,6 +435,29 @@
   .pokemonContainer img {
     width: 12.5rem;
   }
+
+  .Details > div {
+    flex-direction: column;
+    height: 30vh;
+  }
+
+  .pokemonImgContainer {
+    padding: 0;
+    padding-top: 40px;
+    justify-content: center;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    height: 30%;
+  }
+
+  .pokemonImgContainer img {
+    width: 10rem;
+  }
+
+  .pokemonInfoContainer {
+    width: 100%;
+    padding: 10px 20px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -307,5 +509,46 @@
 
   .pokemonContainer img {
     width: 12.5rem;
+  }
+
+  .pokemonContainer {
+    width: 20rem;
+    height: 300px;
+  }
+
+  .pokemonContainer img {
+    width: 12.5rem;
+  }
+
+  .Details > div {
+    flex-direction: column;
+    height: 50vh;
+    width: 80vw;
+  }
+
+  .pokemonImgContainer {
+    padding: 0;
+    padding-top: 40px;
+    justify-content: center;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    height: 30%;
+  }
+
+  .pokemonImgContainer img {
+    width: 10rem;
+  }
+
+  .pokemonInfoContainer {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 680px) and (max-width: 680px) {
+  .Details > div {
+    flex-direction: column;
+    height: 50vh;
+    width: 80vw;
   }
 }
