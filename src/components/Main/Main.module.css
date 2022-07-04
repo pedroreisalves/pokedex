@@ -497,21 +497,13 @@
     display: none;
   }
 
-  .pokemonsContainer {
-    width: 100vw;
-    justify-content: center;
-  }
-
   .pokemonContainer {
     width: 20rem;
     height: 300px;
   }
 
-  .pokemonContainer img {
-    width: 12.5rem;
-  }
-
   .pokemonContainer {
+    justify-content: center;
     width: 20rem;
     height: 300px;
   }
