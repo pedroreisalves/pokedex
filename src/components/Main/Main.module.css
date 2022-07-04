@@ -498,11 +498,6 @@
   }
 
   .pokemonContainer {
-    width: 20rem;
-    height: 300px;
-  }
-
-  .pokemonContainer {
     justify-content: center;
     width: 20rem;
     height: 300px;
