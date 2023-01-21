@@ -10,5 +10,6 @@ npm start
 ### Built with:
 - [React](https://pt-br.reactjs.org/)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Redux](https://redux.js.org/)
 ### Developed by:
 - [Pedro Reis](https://www.linkedin.com/in/pedroreisalves/)
